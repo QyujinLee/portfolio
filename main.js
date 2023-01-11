@@ -22,7 +22,14 @@ navbarMenu.addEventListener('click', (event) => {
     return;
   }
 
+  navbarMenu.classList.remove('open');
   scrollIntoView(link);
+});
+
+// 화면 작아진 경우, navbar toggle 버튼 제어
+const btnNavbarToggle = document.querySelector('.navbar__toggle-btn');
+btnNavbarToggle.addEventListener('click', () => {
+  navbarMenu.classList.toggle('open');
 });
 
 // home의 contact 버튼 클릭 시 contact화면으로 스크롤
@@ -51,6 +58,42 @@ document.addEventListener('scroll', () => {
 // arrow-up 버튼 클릭
 arrowUp.addEventListener('click', () => {
   scrollIntoView('#home');
+});
+
+// Projects
+const workBtnContainer = document.querySelector('.work__categories');
+const projectContainer = document.querySelector('.work__projects');
+const projects = document.querySelectorAll('.project');
+
+workBtnContainer.addEventListener('click', (e) => {
+  const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
+
+  if (!filter) {
+    return;
+  }
+
+  // 버튼 액티브 set
+  const active = document.querySelector('.category__btn.selected');
+  active.classList.remove('selected');
+  const target = e.target.nodeName === 'BUTTON' ? e.target : e.target.parentNode;
+  target.classList.add('selected');
+
+  // 애니메이션 추가
+  projectContainer.classList.add('anim-out');
+
+  setTimeout(() => {
+    //
+    projects.forEach((project) => {
+      if (filter === '*' || filter === project.dataset.type) {
+        project.classList.remove('invisible');
+      } else {
+        project.classList.add('invisible');
+      }
+    });
+
+    // 애니메이션 제거
+    projectContainer.classList.remove('anim-out');
+  }, 300);
 });
 
 /**
