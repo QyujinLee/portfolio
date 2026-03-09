@@ -17,7 +17,6 @@ import ContactSection from './sections/ContactSection';
 import HomeSection from './sections/HomeSection';
 import Navbar from './sections/Navbar';
 import SkillsSection from './sections/SkillsSection';
-import TestimonialsSection from './sections/TestimonialsSection';
 import WorksSection from './sections/WorksSection';
 
 type SectionElementMap = Record<SectionId, HTMLElement | null>;
@@ -28,7 +27,6 @@ export default function PortfolioPage() {
     about: null,
     skills: null,
     works: null,
-    testimonials: null,
     contact: null,
   });
 
@@ -140,8 +138,6 @@ export default function PortfolioPage() {
         isFiltering={isFiltering}
         onFilterClick={handleProjectFilter}
       />
-
-      <TestimonialsSection refCallback={assignSectionRef('testimonials')} />
 
       <ContactSection refCallback={assignSectionRef('contact')} profile={profile} />
 

@@ -7,6 +7,8 @@ interface ContactSectionProps {
 }
 
 export default function ContactSection({ refCallback, profile }: ContactSectionProps) {
+  const currentYear = new Date().getFullYear();
+
   return (
     <section id="contact" ref={refCallback} className={styles.section}>
       <h2>Let&apos;s Talk</h2>
@@ -14,7 +16,7 @@ export default function ContactSection({ refCallback, profile }: ContactSectionP
       <a href={profile.github} target="_blank" rel="noreferrer" className={styles.githubLink} aria-label="GitHub 프로필 열기">
         GitHub
       </a>
-      <p className={styles.rights}>2026 Gyujin - All rights reserved</p>
+      <p className={styles.rights}>{currentYear} Gyujin - All rights reserved</p>
     </section>
   );
 }

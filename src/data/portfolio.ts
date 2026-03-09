@@ -1,4 +1,4 @@
-export type SectionId = 'home' | 'about' | 'skills' | 'works' | 'testimonials' | 'contact';
+export type SectionId = 'home' | 'about' | 'skills' | 'works' | 'contact';
 
 export interface NavItem {
   id: SectionId;
@@ -45,20 +45,13 @@ export interface Project {
   href: string;
 }
 
-export interface Testimonial {
-  name: string;
-  company: string;
-  text: string;
-}
-
-export const sectionOrder: SectionId[] = ['home', 'about', 'skills', 'works', 'testimonials', 'contact'];
+export const sectionOrder: SectionId[] = ['home', 'about', 'skills', 'works', 'contact'];
 
 export const navItems: NavItem[] = [
   { id: 'home', label: 'Home' },
   { id: 'about', label: 'About' },
   { id: 'skills', label: 'Skills' },
   { id: 'works', label: 'My Works' },
-  { id: 'testimonials', label: 'Testimonials' },
   { id: 'contact', label: 'Contact' },
 ];
 
@@ -138,23 +131,5 @@ export const projects: Project[] = [
     type: 'back-end',
     image: '/images/projects/sample_project.png',
     href: '#',
-  },
-];
-
-export const testimonials: Testimonial[] = [
-  {
-    name: '김주임',
-    company: 'EMBIOME',
-    text: '요구사항을 빠르게 구조화하고, 구현까지 책임감 있게 마무리하는 개발자입니다.',
-  },
-  {
-    name: '최대리',
-    company: 'Sentbe',
-    text: '협업 커뮤니케이션이 명확하고, 일정 관리가 안정적입니다.',
-  },
-  {
-    name: '박매니저',
-    company: 'Kakao',
-    text: '복잡한 이슈를 단계적으로 정리해 팀이 이해하기 쉬운 형태로 공유합니다.',
   },
 ];
