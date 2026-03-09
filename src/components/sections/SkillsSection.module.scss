@@ -1,0 +1,90 @@
+.section {
+  padding: 50px 16px;
+  text-align: center;
+  background-color: var(--color-yellow);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section h2 {
+  font-size: var(--font-large);
+  margin: 8px 0 16px;
+}
+
+.section p {
+  font-size: var(--font-regular);
+  margin: 4px 0;
+}
+
+.skillset {
+  margin-top: 20px;
+  display: flex;
+  color: var(--color-light-white);
+}
+
+.skillLeft {
+  flex-basis: 60%;
+  padding: 20px 40px;
+  background-color: var(--color-dark-grey);
+}
+
+.skillItem {
+  margin-bottom: 24px;
+}
+
+.skillMeta {
+  display: flex;
+  justify-content: space-between;
+}
+
+.skillBar {
+  width: 100%;
+  height: 4px;
+  background-color: var(--color-grey);
+}
+
+.skillValue {
+  height: 4px;
+  background-color: var(--color-orange);
+}
+
+.skillRight {
+  flex-basis: 40%;
+  background-color: var(--color-light-grey);
+}
+
+.skillBlock {
+  padding: 20px;
+}
+
+.skillBlock:first-child {
+  background-color: var(--color-grey);
+}
+
+.skillBlock h3 {
+  color: var(--color-white);
+  margin-top: 0;
+}
+
+.skillBlock ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.skillBlock li {
+  margin-bottom: 8px;
+}
+
+@media screen and (max-width: 768px) {
+  .section {
+    padding: 40px 16px;
+  }
+
+  .skillset {
+    flex-direction: column;
+  }
+}

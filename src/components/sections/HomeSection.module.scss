@@ -1,0 +1,46 @@
+.home {
+  background: url('/images/home-background.png') center / cover no-repeat;
+  padding: 120px 24px 48px;
+  text-align: center;
+  min-height: 640px;
+}
+
+.container {
+  transition: opacity 120ms linear;
+}
+
+.avatar {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 2px solid var(--color-light-white);
+  object-fit: cover;
+}
+
+.title {
+  font-size: var(--font-large);
+  color: var(--color-white);
+  margin: 16px 0 8px;
+  text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+}
+
+.subtitle {
+  color: var(--color-white);
+  font-size: var(--font-medium);
+  margin: 8px 0;
+  text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+}
+
+.contactBtn {
+  margin-top: 24px;
+  color: var(--color-white);
+  font-size: var(--font-regular);
+  font-weight: var(--weight-bold);
+  border: 2px solid var(--color-white);
+  border-radius: var(--size-border-radius);
+  padding: 8px 12px;
+}
+
+.contactBtn:hover {
+  background-color: var(--color-main-dark-blue);
+}
