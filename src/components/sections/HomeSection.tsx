@@ -11,7 +11,12 @@ interface HomeSectionProps {
 
 export default function HomeSection({ refCallback, profile, homeOpacity, onContactClick }: HomeSectionProps) {
   return (
-    <section id="home" ref={refCallback} className={styles.home}>
+    <section
+      id="home"
+      ref={refCallback}
+      className={styles.home}
+      style={{ backgroundImage: `url(${process.env.NEXT_PUBLIC_BASE_PATH}/images/home-background.png)` }}
+    >
       <div className={styles.container} style={{ opacity: homeOpacity }}>
         <Image src="/images/profile.jpeg" alt="이규진 프로필 사진" width={250} height={250} className={styles.avatar} priority />
         <h1 className={styles.title}>{profile.title}</h1>

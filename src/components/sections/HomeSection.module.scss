@@ -1,5 +1,7 @@
 .home {
-  background: url('/images/home-background.png') center / cover no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   padding: 120px 24px 48px;
   text-align: center;
   min-height: 640px;
