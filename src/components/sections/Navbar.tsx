@@ -2,6 +2,7 @@ import Image from 'next/image';
 import type { Dispatch, SetStateAction } from 'react';
 import type { NavItem, SectionId } from '../../data/portfolio';
 import styles from './Navbar.module.scss';
+import webIconWhite from '@public/images/web-icon-white.png';
 
 interface NavbarProps {
   navItems: NavItem[];
@@ -25,7 +26,7 @@ export default function Navbar({
   return (
     <nav className={`${styles.navbar} ${isNavbarDark ? styles.navbarDark : ''}`} aria-label="Main navigation">
       <div className={styles.logoWrap}>
-        <Image src="/images/web-icon-white.png" alt="logo" width={22} height={22} className={styles.logoIcon} />
+        <Image src={webIconWhite} alt="logo" width={22} height={22} className={styles.logoIcon} />
         <button type="button" className={styles.logoButton} onClick={() => onNavigate('home')}>
           {logoName}
         </button>
