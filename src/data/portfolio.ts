@@ -1,3 +1,7 @@
+import type { StaticImageData } from 'next/image';
+import logoOpenit from '@public/images/jobs/logo-openit.png';
+import sampleProject from '@public/images/projects/sample_project.png';
+
 export type SectionId = 'home' | 'about' | 'skills' | 'works' | 'contact';
 
 export interface NavItem {
@@ -24,7 +28,7 @@ export interface Job {
   company: string;
   role: string;
   period: string;
-  logo: string;
+  logo: StaticImageData;
 }
 
 export interface Skill {
@@ -41,7 +45,7 @@ export interface Project {
   title: string;
   description: string;
   type: 'front-end' | 'back-end';
-  image: string;
+  image: StaticImageData;
   href: string;
 }
 
@@ -87,7 +91,7 @@ export const jobs: Job[] = [
     company: '오픈아이티',
     role: '서비스사업부 | 대리',
     period: '2018.11.01 ~ 현재',
-    logo: '/images/jobs/logo-openit.png',
+    logo: logoOpenit,
   },
 ];
 
@@ -115,21 +119,21 @@ export const projects: Project[] = [
     title: 'Portfolio Website',
     description: 'HTML/CSS 기반 반응형 포트폴리오 구축',
     type: 'front-end',
-    image: '/images/projects/sample_project.png',
+    image: sampleProject,
     href: '#',
   },
   {
     title: 'Admin Dashboard',
     description: '컴포넌트 중심 대시보드 UI 개발',
     type: 'front-end',
-    image: '/images/projects/sample_project.png',
+    image: sampleProject,
     href: '#',
   },
   {
     title: 'API Service',
     description: 'Spring Boot 기반 업무 API 서버 구현',
     type: 'back-end',
-    image: '/images/projects/sample_project.png',
+    image: sampleProject,
     href: '#',
   },
 ];
